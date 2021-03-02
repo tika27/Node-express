@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql = sql.createConnection({
-    host: 'localhost',
+    host: 'localhostmap',
     port: 8080,
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'burg_db'
 
 })
