@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS burg_db;
 
 CREATE DATABASE burg_db;
 
-USE burg_db;
+USE burger;
 
 CREATE TABLE burgers (
   id int AUTO_INCREMENT NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE burgers (
   PRIMARY KEY(id)
 );
 
-SELECT * FROM burgers;
+-- SELECT * FROM burgers;
 
 
 -- //have not enter into database yet because its not working 
