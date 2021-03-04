@@ -7,7 +7,7 @@ const burger = {
     insertOne(column, value, cb) {
         orm.insertOne("burgers", column, value, (res) => cb(res));
     },
-    updatingOne(objColVals, condition, cd) {
+    updateOne(objColVals, condition, cb) {
         orm.updateOne("burgers", objColVals, condition, (res) => cb(res)); 
     },
 }

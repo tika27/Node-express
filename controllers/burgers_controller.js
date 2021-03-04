@@ -22,7 +22,8 @@ router.post("/api/burger", (req, res)=>{
     });
 });
 
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/api/burger/:id", (req, res) => {
+    console.log("put req starting");
     const condition = `id = ${req.params.id}`;
     console.log('condition', condition);
 
@@ -31,6 +32,7 @@ router.put("/api/burgers/:id", (req, res) => {
         },
 
         condition, (result) => {
+            console.log("resust complete");
             if (result.changeRows === 0){
                 return res.status(404).end()
             }

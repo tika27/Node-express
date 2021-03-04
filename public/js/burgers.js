@@ -1,4 +1,4 @@
-const { response } = require("express");
+// const { response } = require("express");
 
 document.addEventListener("DOMContentLoaded", (event) =>{
     if (event){
@@ -15,11 +15,14 @@ document.addEventListener("DOMContentLoaded", (event) =>{
             const id = e.target.getAttribute("data-id");
             const newBurger = e.target.getAttribute("data-newburger");
 
+            console.log(id);
+
             const newBurgerState = {
                 devoured: newBurger,
             };
+            console.log(newBurgerState);
 
-            fetch(`/api/burgers/${id}`, {
+            fetch(`/api/burger/${id}`, {
                 method: "put",
                 headers:{
                     Accept: 'application/json',
@@ -53,7 +56,7 @@ if (burgerInt) {
             burger_name: document.getElementById('creatingBurger').value.trim(),
             devour: document.getElementById('devoured').checked,
         }
-        fetch(`/api/burgers`, {
+        fetch(`/api/burger`, {
             method: "POST",
             headers:
             {

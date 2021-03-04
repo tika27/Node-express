@@ -1,24 +1,28 @@
-<h1>Burgers</h1>
+<h1>Lets Et Da Burgers</h1>
+<img src="/img/burger.jpeg" alt="Burger" class="pic" />
+<img src="/img/download-1.jpg" alt="Burger" class="pic" />
+<img src="/img/download.jpg" alt="Burger" class="pic" />
 
-<h2>Burgers that are not Devour</h2>
+
+<h1>Burgers that are ready to Devour</h1>
 <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{>burger/burger-block devoured=false}}
+    {{#each burger}}
+    {{#unless this.devoured}}
+    {{>burgers/burgers-block devoured="1"}}
     {{/unless}}
     {{/each}}
 </ul>
 
-<h2>Devoured burgers</h2>
+<h1>Devoured burgers</h1>
 <ul>
-    {{#each burgers}}
+    {{#each burger}}
     {{#if devoured}}
-    {{> burger-block devoured=false}}
+    {{> burgers/burgers-block devoured="0"}}
     {{/if}}
     {{/each}}
 </ul>
 
-<h2>Add a burger</h2>
+<h1>What kind of Burger would you like to eat today?</h1>
 <form id="create-form">
 
     <div class="form-group">
@@ -28,8 +32,8 @@
 
     <div class="form-group">
         <label for="devour">Devoured?</label><br>
-        <input type="radio" name="devoured" value="1" id="devoured" checked> Devoured<br>
-        <input type="radio" name="devoured" value="0" id="notDevoured"> Ready to be Devour
+        <input type="radio" name="devoured" value="1" id="devoured" checked> Devour<br>
+        <input type="radio" name="devoured" value="0" id="notDevoured"> Not Yet
     </div>
 
     <button type="submit">Add Burger</button>
